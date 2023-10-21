@@ -11,3 +11,54 @@ root {
     --black: #08090A;
     --rose-quarts: #A7A2A9;
 }
+
+body {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+p {
+    margin: auto auto;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+span {
+    color: #BB2548;  
+}
+
+div {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    position: absolute;
+    left: 58%;
+    bottom: 46%;
+    animation: anim 7.5s infinite ;
+}
+
+div::after {
+    content: '';
+    position: absolute;
+    transform: translate(-419px, -6px);
+    width: 335px;
+    height: 70px;
+    background-color: white;
+}
+
+@keyframes anim {
+    0%{
+    }
+    80%{
+        transform: translateX(-400px);
+
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
