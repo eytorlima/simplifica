@@ -277,7 +277,7 @@
     .w-11-mc {width: 91.7%;}
     .w-12-mc {width: 100%;}
 
-    /*----HEIGHTS----*/
+    /*----HEIGHTS FOR MOST SMARTPHONES- (MICRO)----*/
     .h-auto-mc {height: auto;}
     .h-min-mc {height: min-content;}
     .h-max-mc {height: max-content;}
@@ -573,6 +573,24 @@
     .w-11-md {width: 91.7%;}
     .w-12-md {width: 100%;}
 
+    /*----HEIGHTS FOR MOST LAPTOPS- (LARGE)----*/
+    .h-auto-md {height: auto;}
+    .h-min-md {height: min-content;}
+    .h-max-md {height: max-content;}
+    .h-0-md {height: 0;}
+    .h-1-md {height: 8.3%;}
+    .h-2-md {height: 16.7%;}
+    .h-3-md {height: 25%;}
+    .h-4-md {height: 33.3%;}
+    .h-5-md {height: 41.7%;}
+    .h-6-md {height: 50%;}
+    .h-7-md {height: 58.3%;}
+    .h-8-md {height: 66.7%;}
+    .h-9-md {height: 75%;}
+    .h-10-md {height: 83.3%;}
+    .h-11-md {height: 91.7%;}
+    .h-12-md {height: 100%;}
+
     /*----JUSTIFY CONTENT FOR SMALL LAPTOPS - (MEDIUM)----*/
     .j-start-md {justify-content: flex-start;}
     .j-center-md {justify-content: center;}
@@ -702,6 +720,24 @@
     .w-10-lg {width: 83.3%;}
     .w-11-lg {width: 91.7%;}
     .w-12-lg {width: 100%;}
+
+    /*----HEIGHTS FOR LAPTOPS AND DESKTOPS- (LARGE)----*/
+    .h-auto-lg {height: auto;}
+    .h-min-lg {height: min-content;}
+    .h-max-lg {height: max-content;}
+    .h-0-lg {height: 0;}
+    .h-1-lg {height: 8.3%;}
+    .h-2-lg {height: 16.7%;}
+    .h-3-lg {height: 25%;}
+    .h-4-lg {height: 33.3%;}
+    .h-5-lg {height: 41.7%;}
+    .h-6-lg {height: 50%;}
+    .h-7-lg {height: 58.3%;}
+    .h-8-lg {height: 66.7%;}
+    .h-9-lg {height: 75%;}
+    .h-10-lg {height: 83.3%;}
+    .h-11-lg {height: 91.7%;}
+    .h-12-lg {height: 100%;}
 
     /*----JUSTIFY CONTENT FOR LAPTOPS AND DESKTOPS - (LARGE)----*/
     .j-start-lg {justify-content: flex-start;}
