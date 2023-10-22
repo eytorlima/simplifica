@@ -1,20 +1,81 @@
+/*
+    +------------------------------------------------------------------------------------+
+    |                                                                                    |
+    | The purpose of this file is to function as a kind of framework,                    |
+    | as can be seen in the manipulation of Grids in Bootstrap and Tailwind.             |
+    | All page structure issues must be based on this file                               |
+    | (structure.css). Furthermore, it is also possible to work on responsiveness        |
+    | of the site through this file, as it has capable media queries                     |
+    | to adapt the layout to a range of sizes of different devices                       |
+    |                                                                                    |
+    +------------------------------------------------------------------------------------+
+    |                                                                                    |
+    | .f-e ->   Matches the parent element. Be sure to use it to create a                |
+    |           flexible structure with the .row and .col classes.                       |
+    |                                                                                    |
+    | .row ->   Matches the element that has a structure like a line                     |
+    |           Make sure you have a parent element with class                           |
+    |           .f-e before using this class                                             |
+    |                                                                                    |
+    | .col->    Matches the element that has a structure like a column                   |
+    |           Make sure you have a parent element with class                           |
+    |           .f-e before using this class                                             |
+    |                                                                                    |
+    +------------------------------------------------------------------------------------+
+    |                     <----EXPLANATION OF SIZE ACRONYMS---->                         |
+    |                                                                                    |
+    | *mc -> Means MICRO and and must be used in device layouts with a                   |
+    |        min-width of 300px.                                                         |
+    |                                                                                    |
+    | *sm -> Means SMALL and and must be used in device layouts with a                   |
+    |        min-width of 768px.                                                         |
+    |                                                                                    |
+    | *md -> Means MEDIUM and and must be used in device layouts with a                  |
+    |        min-width of 992px.                                                         |
+    |                                                                                    |
+    | *lg -> Means LARGE and and must be used in device layouts with a                   |
+    |        min-width of 1200px.                                                        |
+    |                                                                                    |
+    +------------------------------------------------------------------------------------+
+
+    <----TABLE WITH RELATIONSHIPS BETWEEN DEVICE'S SIZES---->
+
+    +----------+-----------+-----------+
+    | ACRONYMS | MIN-WIDTH | MAX-WIDTH |
+    +----------+-----------+-----------+
+    | *mc      |   300px   |  ~767px   |
+    | *sm      |   768px   |  ~991px   |
+    | *md      |   992px   |  ~1999px  |
+    | *lg      |   1200px  |  Infinite |
+    +----------+-----------+-----------+
+
+             
+*/
+
+
+
+/*
+    +-------------------------------------+
+    |                                     |
+    |    The idea of ​​using box-sizing,    |
+    |    allows size calculation          |
+    |    be done correctly, validating    |
+    |    the size and width set by the    |
+    |    browser.                         |                        
+    |                                     |
+    +-------------------------------------+
+*/
+
 *{
     box-sizing: border-box;
-    /*
-        A ideia de passar o box-sizing,
-        permite que o cálculo do tamanho
-        seja feito de forma correta, validando
-        o tamanho e largura setado pelo
-        navegador
+  
 
-    */
-
-    /* TUDO QUE FOR PARA SETAR NO HTML INTEIRO
-       COLOCAREMOS AQUI !!!!                */
+    /* EVERYTHING THAT CAN BE SET IN THE ENTIRE HTML
+       WE WILL PUT IT HERE!!!!                    */
 }
 
 /*----FATHER ELEMENT----*/
-.e{
+.f-e{
     display: block;
     overflow: auto;
     width: 100%;
@@ -59,6 +120,25 @@
 .w-10 {width: 83.3%;}
 .w-11 {width: 91.7%;}
 .w-12 {width: 100%;}
+
+/*----HEIGHTS----*/
+.h-auto {height: auto;}
+.h-min {height: min-content;}
+.h-max {height: max-content;}
+.h-0 {height: 0;}
+.h-1 {height: 8.3%;}
+.h-2 {height: 16.7%;}
+.h-3 {height: 25%;}
+.h-4 {height: 33.3%;}
+.h-5 {height: 41.7%;}
+.h-6 {height: 50%;}
+.h-7 {height: 58.3%;}
+.h-8 {height: 66.7%;}
+.h-9 {height: 75%;}
+.h-10 {height: 83.3%;}
+.h-11 {height: 91.7%;}
+.h-12 {height: 100%;}
+
 
 /*----JUSTIFY CONTENT----*/
 .j-start {justify-content: flex-start;}
@@ -148,9 +228,157 @@
 .fs-xl{font-size: 2.0rem;}
 .fs-xxl{font-size: 2.5rem;}
 
+@media only screen and (min-width: 300px){
+    /*----FATHER ELEMENT FOR MOST SMARTPHONES- (MICRO)----*/
+    .f-e-mc{
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /*----ROW ELEMENT FOR MOST SMARTPHONES- (MICRO)----*/
+    .row-mc{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+    }
+
+    /*----COLUMN ELEMENT FOR MOST SMARTPHONES- (MICRO)----*/
+    .col-mc{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: max-content;
+        height: 100%;
+
+    }
+
+    /*----WIDTHS FOR MOST SMARTPHONES- (MICRO)----*/
+    .w-auto-mc {width: auto;}
+    .w-min-mc {width: min-content;}
+    .w-max-mc {width: max-content;}
+    .w-0-mc{width: 0;}
+    .w-1-mc{width: 8.3%;}
+    .w-2-mc{width: 16.7%;}
+    .w-3-mc{width: 25%;}
+    .w-4-mc{width: 33.3%;}
+    .w-5-mc{width: 41.7%;}
+    .w-6-mc{width: 50%;}
+    .w-7-mc{width: 58.3%;}
+    .w-8-mc{width: 66.7%;}
+    .w-9-mc{width: 75%;}
+    .w-10-mc {width: 83.3%;}
+    .w-11-mc {width: 91.7%;}
+    .w-12-mc {width: 100%;}
+
+    /*----HEIGHTS----*/
+    .h-auto-mc {height: auto;}
+    .h-min-mc {height: min-content;}
+    .h-max-mc {height: max-content;}
+    .h-0-mc {height: 0;}
+    .h-1-mc {height: 8.3%;}
+    .h-2-mc {height: 16.7%;}
+    .h-3-mc {height: 25%;}
+    .h-4-mc {height: 33.3%;}
+    .h-5-mc {height: 41.7%;}
+    .h-6-mc {height: 50%;}
+    .h-7-mc {height: 58.3%;}
+    .h-8-mc {height: 66.7%;}
+    .h-9-mc {height: 75%;}
+    .h-10-mc {height: 83.3%;}
+    .h-11-mc {height: 91.7%;}
+    .h-12-mc {height: 100%;}
+
+    /*----JUSTIFY CONTENT FOR MOST SMARTPHONES- (MICRO)----*/
+    .j-start-mc {justify-content: flex-start;}
+    .j-center-mc {justify-content: center;}
+    .j-mend-mc {justify-content: flex-end;}
+    .j-mbetween-mc {justify-content: space-between;}
+    .j-maround-mc {justify-content: space-around;}
+    .j-mevenly-mc {justify-content: space-evenly;}
+
+    /*----ALIGN ITEMS FOR MOST SMARTPHONES- (MICRO)----*/
+    .a-start-mc {align-items: flex-start;}
+    .a-center-mc {align-items: center;}
+    .a-end-mc {align-items: flex-end;}
+    .a-stretch-mc {align-items: stretch;}
+    .a-baseline-mc{align-items: baseline;}
+
+    /*----ORDER OF DISPLAY ELEMENTS FOR MOST SMARTPHONES- (MICRO)----*/
+    .o-1-mc{order: 1;}
+    .o-2-mc{order: 2;}
+    .o-3-mc{order: 3;}
+    .o-4-mc{order: 4;}
+    .o-5-mc{order: 5;}
+    .o-6-mc{order: 6;}
+    .o-7-mc{order: 7;}
+    .o-8-mc{order: 8;}
+    .o-9-mc{order: 9;}
+    .o-10-mc{order: 10;}
+    .o-11-mc{order: 11;}
+    .o-12-mc{order: 12;}
+
+    /*----GAP BETWEEN ELEMENTS FOR MOST SMARTPHONES- (MICRO)----*/
+    .g-1-mc {gap: 5px;}
+    .g-2-mc {gap: 10px;}
+    .g-3-mc {gap: 15px;}
+    .g-4-mc {gap: 20px;}
+    .g-5-mc {gap: 25px;}
+    .g-6-mc {gap: 30px;}
+    .g-7-mc {gap: 35px;}
+    .g-8-mc {gap: 40px;}
+    .g-9-mc {gap: 45px;}
+    .g-10-mc {gap: 50px;}
+    .g-11-mc {gap: 55px;}
+    .g-12-mc {gap: 60px;}
+
+    /*----ELEMENTS MARGIN FOR MOST SMARTPHONES- (MICRO)----*/
+    .m-1-mc{margin: 8px;}
+    .m-2-mc{margin: 16px;}
+    .m-3-mc{margin: 24px;}
+    .m-4-mc{margin: 32px;}
+    .m-5-mc{margin: 40px;}
+    .m-6-mc{margin: 48px;}
+    .m-7-mc{margin: 56px;}
+    .m-8-mc{margin: 64px;}
+    .m-9-mc{margin: 72px;}
+    .m-10-mc{margin: 80px;}
+    .m-11-mc{margin: 88px;}
+    .m-12-mc{margin: 96px;}
+
+    /*----ELEMENTS PADDING FOR MOST SMARTPHONES- (MICRO)----*/
+    .p-1-mc {padding: 5px;}
+    .p-2-mc {padding: 10px;}
+    .p-3-mc {padding: 15px;}
+    .p-4-mc {padding: 20px;}
+    .p-5-mc {padding: 25px;}
+    .p-6-mc {padding: 30px;}
+    .p-7-mc {padding: 35px;}
+    .p-8-mc {padding: 40px;}
+    .p-9-mc {padding: 45px;}
+    .p-10-mc {padding: 50px;}
+    .p-11-mc {padding: 55px;}
+    .p-12-mc {padding: 60px;}
+
+    /*----LINE-HEIGHT FOR MOST SMARTPHONES- (MICRO)---*/
+
+    .lh1-mc {line-height: 15px;}
+    .lh2-mc{line-height: 20px;}
+    .lh3-mc{line-height: 25px;}
+    .lh4-mc{line-height: 35px;}
+    .lh5-mc{line-height: 45px;}
+
+}
+
 @media only screen and (min-width: 768px){
     /*----FATHER ELEMENT FOR TABLETS - (SMALL)----*/
-    .e-sm{
+    .f-e-sm{
         display: block;
         overflow: auto;
         width: 100%;
@@ -196,6 +424,24 @@
     .w-10-sm {width: 83.3%;}
     .w-11-sm {width: 91.7%;}
     .w-12-sm {width: 100%;}
+
+    /*----HEIGHTS----*/
+    .h-auto-sm {height: auto;}
+    .h-min-sm {height: min-content;}
+    .h-max-sm {height: max-content;}
+    .h-0-sm {height: 0;}
+    .h-1-sm {height: 8.3%;}
+    .h-2-sm {height: 16.7%;}
+    .h-3-sm {height: 25%;}
+    .h-4-sm {height: 33.3%;}
+    .h-5-sm {height: 41.7%;}
+    .h-6-sm {height: 50%;}
+    .h-7-sm {height: 58.3%;}
+    .h-8-sm {height: 66.7%;}
+    .h-9-sm {height: 75%;}
+    .h-10-sm {height: 83.3%;}
+    .h-11-sm {height: 91.7%;}
+    .h-12-sm {height: 100%;}
 
     /*----JUSTIFY CONTENT FOR TABLETS - (SMALL)----*/
     .j-start-sm {justify-content: flex-start;}
@@ -280,7 +526,7 @@
 
 @media only screen and (min-width: 992px){
     /*----FATHER ELEMENT FOR SMALL LAPTOPS - (MEDIUM)----*/
-    .e-md{
+    .f-e-md{
         display: block;
         overflow: auto;
         width: 100%;
@@ -410,7 +656,7 @@
 
 @media only screen and (min-width: 1200px){
     /*----FATHER ELEMENT FOR LAPTOPS AND DESKTOPS - (LARGE)----*/
-    .e-lg{
+    .f-e-lg{
         display: block;
         overflow: auto;
         width: 100%;
