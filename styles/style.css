@@ -211,14 +211,8 @@ body {
     color: var(--black);
 }
 .social-link:hover {
-    .icon-social{
-        background-image: url('../assets/icons/instagram-blue.png');
-    }
     .social-link, .social-media{
         color: var(--accent-100);
-    }
-    .icon-social-email{
-        background-image: url('../assets/icons/email-blue.png');
     }
 }
 
