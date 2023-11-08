@@ -44,54 +44,12 @@ body {
     width: 100%;
 }
 
-.first_session{
+.first_session {
     display: flex;
     height: calc(100vh - 120px);
     flex-direction: row;
     justify-content: center;
 }
-.second_session, .third_session, .fourth_session, .fifth-session{
-    display: flex;
-    height: 90vh;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.first_session .box-img img {
-    margin-top: 200px;
-}
-
-.first_session .container {
-    margin-top: 120px;
-}
-
-.fourth_session .box-img img{
-    width: 80%;
-}
-
-.paragraph{
-    font-size: 35px;
-}
-.title{
-    font-weight: bold;
-    color: var(--rose-red);
-    font-size: 45px;
-}
-.title-2{
-    font-weight: bold;
-    color: var(--accent-200);
-    font-size: 45px;
-}
-
-.right{
-    text-align: right;
-}
-
-.emphasys{
-    font-weight: bold;
-    color: var(--rose-red);
-}
-
 
 .container {
     display: flex;
@@ -102,8 +60,40 @@ body {
     justify-content: center;
 }
 
+.first_session .container {
+    margin-top: 120px;
+}
 
- .btn_outline {
+.first_session .box-img img {
+    margin-top: 200px;
+}
+
+.paragraph {
+    font-size: 35px;
+}
+
+.title {
+    font-weight: bold;
+    color: var(--rose-red);
+    font-size: 45px;
+}
+
+.title-2 {
+    font-weight: bold;
+    color: var(--accent-200);
+    font-size: 45px;
+}
+
+.right {
+    text-align: right;
+}
+
+.emphasys {
+    font-weight: bold;
+    color: var(--rose-red);
+}
+
+.btn_outline {
     align-items: center;
     border: 5px solid var(--accent-100);
     border-radius: 10px;
@@ -120,18 +110,18 @@ body {
     width: 420px;
 }
 
- .btn_outline img {
+.btn_outline img {
     height: 42px;
     margin-left: 5px;
     width: auto;
 } 
 
- .btn_outline:hover {
+.btn_outline:hover {
     background-color: var(--accent-100);
     color: white;
 }
 
-.box-img{
+.box-img {
     padding: 64px;
     display: flex;
     align-items: center;
@@ -139,14 +129,25 @@ body {
     flex: 1;
 }
 
-.box-img img{
+.box-img img {
     width: 100%;
 }
-.people{
+
+.second_session, .third_session, .fourth_session, .fifth-session {
+    display: flex;
+    height: 90vh;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fourth_session .box-img img {
+    width: 80%;
+}
+
+.people {
     width: 50% !important;
     margin-top: 120px;
 }
-
 
 .skew {
     position: absolute;
@@ -160,7 +161,7 @@ body {
     opacity: 0.5;
     height: 800px;
 }
-.pink_skew2{
+.pink_skew2 {
     background-color: var(--primary-300);
     opacity: 0.5;
     height: 100px;
@@ -177,12 +178,11 @@ body {
     transform: translateY(15px);
 }
 
-
 .pink_title {
     color: var(--rose-red);
 }
 
-.icon-social{
+.icon-social {
     background-image: url('../assets/icons/instagram.png');
     width: 32px;
     height: 32px;
@@ -191,7 +191,7 @@ body {
     align-items: center;
     transition: 0.5s;
 }
-.icon-social-email{
+.icon-social-email {
     background-image: url('../assets/icons/email.png');
     width: 32px;
     height: 32px;
@@ -200,17 +200,17 @@ body {
     align-items: center;
     transition: 0.5s;
 }
-.social-media{
+.social-media {
     font-size: 30px;
     margin-left: 40px;
     text-align: center;
     transition: 0.5s;
 }
-.social-link{
+.social-link {
     text-decoration: none;
     color: var(--black);
 }
-.social-link:hover{
+.social-link:hover {
     .icon-social{
         background-image: url('../assets/icons/instagram-blue.png');
     }
@@ -222,28 +222,13 @@ body {
     }
 }
 
-.btn-ses5{
-    height: 80px;
-    width: 80%;
-    border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    border: 3px solid #00619a;
-    background-color: white;
-    cursor: pointer;
-    color: var(--accent-200);
-    transition: 0.5s;
-}
-.btn-ses5:hover{
-    color: white;
-    background-color: var(--accent-200);
-}
-.tutorial-video{
+.tutorial-video {
     border-radius: 5px;
     width: 100%;
     height: 60%;
     box-shadow: 0px 5px 15px;
 }
+
 .play {
     position: absolute;
     z-index: 1;
@@ -257,77 +242,117 @@ body {
 
 }
 
+.btn-ses5 {
+    height: 80px;
+    width: 80%;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    border: 3px solid #00619a;
+    background-color: white;
+    cursor: pointer;
+    color: var(--accent-200);
+    transition: 0.5s;
+}
+.btn-ses5:hover {
+    color: white;
+    background-color: var(--accent-200);
+}
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
 
-    .play{
-        display: none;
+    .first_session {
+        height: auto;
+        margin-top: 120px;
     }
 
     .first_session .container, .first_session .box-img img {
         margin-top: 0px;
     }
 
-    .paragraph{
-        font-size: 30px;
-    }
-    .people{
-        margin-top: 0;
-        width: 30% !important;
-    }
-    .title, .title-2{
-        font-size: 40px;
-    }
-    .first_session, .third_session, .fourth_session, .fifth-session{
+    .first_session, .third_session, .fourth_session, .fifth-session {
         flex-direction: column;
     }
-    .second_session{
-        flex-direction: column-reverse;
+
+    .paragraph {
+        font-size: 30px;
     }
-    .third_session, .fourth_session, .fifth-session{
-        margin-top: 120px;
+
+    .title, .title-2 {
+        font-size: 40px;
     }
-    .fourth_session{
-        margin-bottom: 200px;
-    }
-    .first_session{
-        height: auto;
-        margin-top: 120px;
-    }
-    .btn_outline{
+
+    .btn_outline {
         font-size: 20px;
         width: 400px;
     }
-    .box-img{
+
+    .box-img {
         justify-content: center;
         align-items: center;
         padding: 20px;
     }
-    .box-img img{
+
+    .box-img img {
         width: 50%;
     }
-    .fourth_session .box-img img{
+
+    .second_session {
+        flex-direction: column-reverse;
+    }
+
+    .people {
+        margin-top: 0;
+        width: 30% !important;
+    }
+
+    .third_session, .fourth_session, .fifth-session {
+        margin-top: 120px;
+    }
+
+    .fourth_session {
+        margin-bottom: 200px;
+    }
+
+    .fourth_session .box-img img {
         width: 50%;
     }
-    .tutorial-video{
+
+    .fifth-session .container {
+        margin-top: 30px;
+    }
+
+    .play {
+        display: none;
+    }
+
+    .tutorial-video {
         width: 90%;
         height: 150%;
     }
-    .btn-ses5{
+
+    .btn-ses5 {
         width: 100%;
-    }
-    .fifth-session .container{
-        margin-top: 30px;
-    }
-    
+    }    
 }
-@media (max-width: 768px){
 
-
-    .container{
+@media (max-width: 768px) {
+    .container {
         padding: 20px;
     }
-    .btn_outline{
+    
+    .paragraph {
+        font-size: 20px;
+    }
+
+    .title, .title-2 {
+        font-size: 35px;
+    }
+
+    .btn_outline {
         margin-top: 30px;
         width: 70%;
         font-size: 15px;
@@ -335,45 +360,45 @@ body {
         padding: 10px;
         
     }
-    .paragraph{
-        font-size: 20px;
-    }
-    .title, .title-2{
-        font-size: 35px;
-    }
-    .box-img img{
-        width: 80%;
-    }
-    .people{
-        width: 40% !important;
-    }
-    .box-img{
+
+    .box-img {
         padding: 10px;
     }
-    .social-media{
-        font-size: 20px;
+
+    .box-img img {
+        width: 80%;
     }
+
+    .people {
+        width: 40% !important;
+    }
+
     .fourth_session {
         margin-bottom: 0px;
     }
 
-    .fourth_session .box-img{
+    .fourth_session .box-img {
         margin-top: -80px;
+    }
+
+    .social-media {
+        font-size: 20px;
     }
 
     .social-link {
         width: fit-content;
     }
 
-    .fifth-session .box-img{
+    .fifth-session .box-img {
         padding: 10px;
     }
-    .tutorial-video{
+
+    .tutorial-video {
         width: 100%;
         height: 100%;
     }
-    .btn-ses5{
+
+    .btn-ses5 {
         font-size: 25px;
     }
-
 }
